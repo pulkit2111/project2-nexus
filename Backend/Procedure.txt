@@ -1,0 +1,12 @@
+after changing to the required Directory;
+npm init;
+npm install express request body-parser ; 
+to start Server, nodemon File.js;
+
+const express = require("express");
+const bodyParser=require("body-parser");
+const request = require("request");
+
+const app=express();
+
+app.listen(3000);

@@ -1,0 +1,346 @@
+body{
+    text-align: center;
+    margin: 0;
+}
+
+/* navbar */
+.shopping-icon{
+    color: rgb(86, 182, 51);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding-right: 0.6vw ;
+}
+
+.shopping-icon:hover{
+    color: #4C8F36;
+}
+
+.shopping-icon span{
+    background-color: rgb(216, 135, 12);
+    color: white;
+    border-radius: 100%;
+    justify-content: center; 
+    position:absolute;
+    top: 5%;
+    right: 0.5%;
+    padding: 0.2vw;
+    font-size: 15px;
+}
+
+nav a.bold {
+    /* Style to be applied to the active section's button */
+    color: black;
+    font-weight: 500;
+}
+
+/* header */
+#first{
+    background-color: #293a32;
+    background-image: url(images/bg.png);
+    background-size: contain;
+}
+
+.first-border{
+    margin: 10vw 4vw 8vw;
+    width: 80%;
+    display: inline-block;
+    padding: 2vw 1vw;
+}
+
+.heading1{
+    font-size: 7vw;
+    color: white;
+    font-family: 'Noto Serif Display', serif;
+    margin: 0 auto;
+    padding: 10% 0 5% 0;
+    text-shadow: 1px 2px grey;
+}
+
+.para1{
+    font-size: 1.5vw;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: white;
+    letter-spacing: 0.5em;
+    font-weight: bold;
+    padding: 3% 0 6% 0;
+}
+
+/* cart */
+.sidebar {
+    width: 30vw;
+    position: fixed;
+    top: 3vw;
+    right: -30vw;
+    height: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    transition: 0.3s;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sidebar-content {
+    font-size: 3vw;
+    border: 0.2vw dashed #d8d8d8;
+    position: relative;
+    padding-top: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 3vw;
+}
+
+.show {
+    right: 0;
+}
+
+.cart-item-dis .item-info{
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: none;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0.5vw;
+    text-align: justify;
+    font-size: 1.5vw;
+    line-height: -1vw;
+}
+
+.cart-item-dis .ii-price{
+    top: 7vw;
+    color: #4C8F36;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+.quantity-btn {
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw auto 1vw;
+}
+
+.quantity {
+    font-size: 1.5vw;
+    margin: 0 5px 3px;
+}
+
+.cart-pic{
+    width: 50%;
+    display: inline-block;
+}
+
+.cart-item{
+    list-style-type: none;
+    position: relative;
+}
+
+.cart-item-dis{
+    display: inline-block;
+    width: 40%;
+}
+
+#order-now-btn{
+    display: inline-block;
+    width: 10vw;
+    font-size: 1.5vw;
+}
+
+
+/* menu */
+.fullMenu{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: right;
+    margin: 0 5vw 0 0;
+}
+
+#menu{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5vw;
+}
+
+.item-info{
+    display: inline-block;
+    width: 20%;
+    margin: 2%;
+    margin-bottom: 5vw;
+    position: relative;
+    font-size: 2vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.item-info:hover{
+    transform: scale(1.02);
+}
+
+.menu-item{
+    width: 100%;
+    text-align: center;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.item-name{
+    margin-top: 1vw;
+    position: absolute;
+    left: 1vw;
+    display: inline-block;
+}
+
+.item-price{
+    margin-top: 1vw;
+    position: absolute;
+    right: 1vw;
+    display: inline-block;
+    color: #4C8F36;
+}
+
+.addtocart{
+    margin: 11vw 0 2vw 0;
+}
+
+.adc-button{
+    font-size: 1.5vw;
+}
+
+.item-des{
+    opacity: 0.8;
+    font-weight: 50;
+    font-size: 1.1vw;
+    position: absolute;
+    left: 0;
+    text-align: justify;
+    display: inline-block;
+    padding: 4vw 3vw 0 1vw;
+}
+
+/* testimonials */
+.testimonials{
+    /* background: url(images/blazingonion&peprika.png); */
+    font-family: 'Josefin Sans', sans-serif;
+    background: url(images/testimonial-bg2.png);
+    background-size: contain;
+    padding: 4vw;
+}
+
+.person{
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 1.5vw 1.5vw 0;
+    border-radius: 2vw;
+    position: relative;
+    width: 22%;
+    margin: 0 2vw 3vw;
+    background-color: white;
+    position: relative;
+    opacity: 0.97;
+    background-image: linear-gradient(to right, rgb(241, 227, 153) , rgb(232, 232, 210));
+}
+
+.person-name{
+    padding: 1.5vw 0 0;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.person-photo{
+    width: 10vw;
+    border-radius: 100%;
+}
+
+.inverted-commas{
+    width: 8vw;
+    opacity: 0.8;
+    position: relative;
+    top: -1vw;
+}
+
+.star{
+    display: inline-block;
+    width: 2vw;
+    opacity: 0.7;
+    position: relative;
+}
+
+.person-testimonial{
+    font-size: 1.5vw;
+    text-align: justify;
+    opacity: 0.6;
+    position: relative;
+    top: -3vw;
+    margin-bottom:-2vw ;
+    /* letter-spacing: -0.08vw; */
+}
+
+/* footer */
+#contact{
+    background: url('images/footer-bg.png');
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    background-attachment:scroll;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.footer-border{
+    display: inline-block;
+    width: 50%;
+    margin: 10% 0 10% 30%;
+    border: 0.8vw solid white;
+    border-radius: 3px;
+    color: #3F544A;
+}
+
+.footer-line{
+    margin-top: 10%;
+    padding: 10%;
+    text-align: left;
+}
+
+
+.cafe-details{
+    margin-top: 10%;
+    display: inline-block;
+}
+
+.feedback-form{
+    display: inline-block;
+    width: 40%;
+    margin: 4vw 0 0 30%;
+    border: 0.2vw solid white;
+    border-radius: 3px;
+    color: #29322d;
+}
+
+.feedback-form .footer-line{
+    margin-top: 0.5vw;
+    padding-bottom: 1vw;
+    padding-left: 1.2vw;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.form-control{
+    border-radius: 0;
+    margin: 0 0 1vw;
+    font-size: 1.2vw;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Sinful Brews</title>
+
+        <!-- title-icon -->
+        <link rel="icon" href="images/favicon.ico">
+
+        <!-- bootstrap-cdn-link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+        <!-- google-fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Josefin+Sans&family=Noto+Serif+Display:wght@100&display=swap" rel="stylesheet">
+         
+        <!-- my-css -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <!-- here is the front of website -->
+        <section class="header">
+
+          <!-- just-navbar-things -->
+            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#first">Cafe Sinful Brews</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#first">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="menu#chef-special">Chef's Special</a></li>
+                            <li><a class="dropdown-item" href="menu#beverages">Beverages</a></li>
+                            <li><a class="dropdown-item" href="menu#ice-cream">Ice Cream</a></li>
+                            <li><a class="dropdown-item" href="menu#pizza">Pizza</a></li>
+                            <li><a class="dropdown-item" href="menu#snacks">Snacks</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#contact">Feedback & Contact</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Profile
+                          </a>
+                          <ul class="dropdown-menu">
+
+                            <li class="nav-item">
+                              <a class="nav-link " href="http://localhost:3000/logout">Log Out</a>
+                            </li>
+    
+                            <li class="nav-item">
+                              <a class="nav-link " href="/profile">Your Profile</a>
+                            </li>
+
+                          </ul>
+                        </li>
+
+                      </ul>
+                  </div>
+
+                  <div class="shopping-icon" >
+                    <i onclick="toggleSidebar()" class="fa-solid fa-bag-shopping" style="padding-left: 2vw;"></i>
+                    <span id="quantity">0</span>  
+                  </div>
+                  
+                </div>
+              </nav>
+
+            <!-- heading-area -->
+            <section id="first">
+              <div class="first-border">
+                <h1 class="heading1">SINFUL BREWS</h1>
+                <p class="para1">ALWAYS READY TO SERVE</p>
+              </div>
+              </section>
+            </div>  
+        </section>
+
+        <!-- Sidebar for cart items -->
+        <div id="sidebar" class="sidebar">
+          <h2 style="padding-top: 2vw; padding-bottom: 2vw;">Cart</h2>
+          <div class="sidebar-content">
+              <ul id="cart-items" class="cart-items">
+              </ul>
+              <hr>
+              <div>
+                <p style="font-size: 2vw; color: #293a32;">Total: <span id="total-price">₹0</span></p>
+
+              <a id="order-now-link" href="http://localhost:3003">
+                <button id="order-now-btn" class="btn btn-outline-danger" type="submit">Order Now</button>
+              </a>
+                <!-- href="https://buy.stripe.com/test_5kAfZycnD9hJ7f24gg" -->
+              </div>
+          </div>
+        </div>
+
+        <!-- here comes menu  -->
+        <section id="menu">
+        
+          <div style="padding-top: 4vw;" id="menu-corousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+
+              <!-- 1st-display -->
+              <div class="carousel-item active" >
+                
+                <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/dosa.png">
+                  </div>
+                   <div>
+                      <p class="item-name">DOSA</p>
+                   </div>
+                   <div>
+                    <p class="item-des">Experience the delight of a dosa: a South Indian symphony on your taste buds.</p>
+                  </div>
+                   <div>
+                    <p class="item-price">₹95</p>
+                   </div>
+                   <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class="adc-button btn btn-outline-danger">ADD TO CART</button>            
+                   </div>
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/pasta.png">
+                  </div>
+                  <div>
+                      <p class="item-name">PASTA</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Tantalize your taste buds with pasta perfection: a savory dish rich of flavors</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹55</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                  </div>
+                  
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/pavbhaji.png">
+                  </div>
+                  <div>
+                      <p class="item-name">PAV BHAJI</p>
+                  </div>
+                  <div>
+                    <p class="item-des">A vibrant medley of mashed vegetables infused with aromatic spices.</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹70</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                   </div>
+                 </div>
+
+              </div>
+
+              <!-- 2nd-display -->
+              <div class="carousel-item">
+
+                <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/noodles.png">
+                  </div>
+                  <div>
+                      <p class="item-name">NOODLES</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Slender strands, perfectly cooked, entwined in a symphony of savory sauces.</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹45</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                  </div>
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/sandwich.png" style="max-width: 100%; height: 100%;">
+                  </div>
+                  <div>
+                      <p class="item-name">SANDWICH</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Layers of fresh, crisp ingredients harmonizing between slices of bread.</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹40</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                  </div>
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                     <img src="images/burger.png">
+                  </div>
+                  <div>
+                     <p class="item-name">BURGER</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Juicy perfection nestled between soft buns, a quick trip to flavor town in every mouthwatering bite.</p>
+                  </div>
+                  <div>
+                     <p class="item-price">₹40</p>
+                  </div>
+                  <div class="addtocart">
+                   <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>             
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 3rd-display -->
+              <div class="carousel-item">
+
+                <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/coffee.png">
+                  </div>
+                  <div>
+                      <p class="item-name">COFFEE</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Sip bliss with coffee: rich, aromatic, an instant hug in a mug.</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹50</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                  </div>
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                      <img src="images/pizza.png">
+                  </div>
+                  <div>
+                      <p class="item-name">PIZZA</p>
+                  </div>
+                  <div>
+                    <p class="item-des">A divine blend of melty cheese, savory toppings, and a golden crust that's simply irresistible.</p>
+                  </div>
+                  <div>
+                    <p class="item-price">₹125</p>
+                  </div>
+                  <div class="addtocart">
+                    <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                  </div>
+                 </div>
+
+                 <div class="item-info">
+                  <div class="menu-item">
+                     <img src="images/momos.png">
+                  </div>
+                  <div>
+                     <p class="item-name">MOMOS</p>
+                  </div>
+                  <div>
+                    <p class="item-des">Momo magic: steamed pockets of joy, bursting with savory goodness.</p>
+                  </div>
+                  <div>
+                     <p class="item-price">₹80</p>
+                  </div>
+                  <div class="addtocart">
+                   <button onclick="toggleSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>             
+                 </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+            <!-- right-left-buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#menu-corousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" style="background-color: grey;"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menu-corousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" style="background-color: grey;"></span>
+            </button>
+          </div>
+          
+           <!-- full-menu-link -->
+           <div class="fullMenu">
+            <a class="btn btn-info" style="font-size: 2vw;" href="/menu">View Full Menu</a>
+          </div>
+
+        </section>
+
+        <!-- testimonials -->
+        <section id="testimonials">
+
+          <div class="testimonials">
+
+            <div class="person" style="top: -3vw;">
+              <img src="images/pulkit2.png" class="person-photo">
+              <h1 class="person-name">Pulkit Mangla</h1>
+              <div class="star-section">
+                <img src="images/star.png" class="star">
+                <img src="images/star.png" class="star">
+                <img src="images/star.png" class="star">
+                <img src="images/star.png" class="star" style="clip-path: inset(0vw 1vw 0vw 0vw);">
+              </div>
+              <img src="images/double-quotes.png" class="inverted-commas">
+              <p class="person-testimonial">This cafe is a hidden gem that tantalizes the taste buds with every sip and bite.</p>
+           </div>
+
+           <div class="person" style="bottom: -4vw;">
+            <img src="images/rohan.png" class="person-photo">
+            <h1 class="person-name">Rohan Bansal</h1>
+            <div class="star-section">
+              <img src="images/star.png" class="star">
+              <img src="images/star.png" class="star">
+              <img src="images/star.png" class="star">
+              <img src="images/star.png" class="star">
+              <img src="images/star.png" class="star" style="clip-path: inset(0vw 1vw 0vw 0vw);">
+            </div>
+            <img src="images/double-quotes.png" class="inverted-commas">
+            <p class="person-testimonial">From the rich aroma to delecatable pastries, this is a symphony of flavors that will leave you craving more.</p>
+           </div>
+
+          </div>
+
+        </section>
+
+        <!-- here comes footer -->
+        <section id="contact">
+          <div class="footer container-fluid">
+
+            <div class="feedback-form" id="feedbackForm">
+              <div class="footer-line" style="margin-top: 0;">
+                <h1 style="margin: 0; font-size: 1.5vw;">FEEDBACK</h1>
+              </div>
+              <div style="margin: 0 1vw; text-align: justify;">
+                <form action="http://localhost:3001/submit-feedback" method="POST">
+                  <input style="display: inline-block; width: 49%;" type="text" name="firstName" class="form-control" placeholder="First Name" required autofocus>
+                  <input style="display: inline-block; width: 49%;" type="text" name="lastName" class="form-control" placeholder="Last Name" required autofocus>
+                  <input  type="text" name="emailAddress" class="form-control" placeholder="Email Address" required autofocus>
+                  <input  type="text" name="phoneNumber" class="form-control" placeholder="Phone Number" required autofocus>
+                  <input  style="padding-bottom: 5vw;" type="text" name="userFeedback" class="form-control" placeholder="Your Feedback" required autofocus>
+                  <input style="margin-bottom: 2vw; border-radius: 0; font-size: 1.2vw;" class="cat-button btn btn-outline-secondary" type="submit" value="SUBMIT">
+                </form>               
+              </div>
+            </div>
+          
+            <div class="footer-border">
+              <div class="footer-line">
+                <h1 style="font-size: 3vw;">COME HAVE LUNCH</h1>
+              <div class="cafe-details">
+                <p>Sinful Brews<br>
+                  JC Bose University YMCA <br>                 
+                  Sector 6 Faridabad <br>
+                  9971815790 <br>
+                  9am-5pm</p>
+              </div>
+             </div>
+            </div>  
+            
+          </div>
+        </section>
+
+        <!-- <div id="card-element" style="height: 100vw;"></div> -->
+
+        <!-- stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
+
+        <!-- font-awesome -->
+        <script src="https://kit.fontawesome.com/94eedba8e3.js" crossorigin="anonymous"></script>
+
+         <!-- bootstrap-js  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- my-javascript -->
+        <script src="index.js" charset="utf-8"></script>
+
+    </body>
+</html>

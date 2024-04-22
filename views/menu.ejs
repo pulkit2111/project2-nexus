@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- title-icon -->
+    <link rel="icon" href="Images/favicon.ico">
+
+    <!-- bootstrap-cdn-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+    <!-- google-fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Josefin+Sans&family=Noto+Serif+Display:wght@100&display=swap" rel="stylesheet">
+     
+    <!-- my-css -->
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <!-- here is the front of website -->
+    <section class="header">
+
+        <!-- just-navbar-things -->
+          <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Cafeteria</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#header">Full Menu</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#chef-special">Chef's Special</a></li>
+                          <li><a class="dropdown-item" href="#beverages">Beverages</a></li>
+                          <li><a class="dropdown-item" href="#ice-cream">Ice Cream</a></li>
+                          <li><a class="dropdown-item" href="#pizza">Pizza</a></li>
+                          <li><a class="dropdown-item" href="#snacks">Snacks</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact & Feedback</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Profile
+                        </a>
+                        <ul class="dropdown-menu">
+
+                          <li class="nav-item">
+                            <a class="nav-link " href="http://localhost:3000/logout">Log Out</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link " href="/profile">Your Profile</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="shopping-icon">
+                  <i onclick="toggleSidebar()" class="fa-solid fa-bag-shopping" style="padding-left: 2vw;"></i>
+                  <span id="quantity">0</span>  
+                </div>
+                
+              </div>
+            </nav> 
+      </section>
+   
+        <!-- here-comes-header -->
+        <section id="header">
+            <div>
+                <h1 class="top-heading">Our Menu</h1>
+                <p class="top-para">Indulge in a symphony of flavors with our meticulously crafted menu, where each dish is a culinary masterpiece waiting to be savored.</p>
+            </div>
+
+            <div>
+                <div class="category">
+                    <a class=" cat-button btn btn-outline-secondary">ALL</a>  
+                    <a class=" cat-button btn btn-outline-secondary" href="#chef-special">Chef's Special</a>            
+                    <a class=" cat-button btn btn-outline-secondary" href="#beverages">Beverages</a>            
+                    <a class=" cat-button btn btn-outline-secondary" href="#ice-cream">Ice Cream</a> 
+                    <a class=" cat-button btn btn-outline-secondary" href="#pizza">Pizza</a>            
+                    <a class=" cat-button btn btn-outline-secondary" href="#snacks">Snacks</a>            
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar for cart items -->
+        <div id="sidebar" class="sidebar">
+          <h2 style="padding-top: 2vw; padding-bottom: 2vw;">Cart</h2>
+          <div class="sidebar-content">
+              <ul id="cart-items" class="cart-items">
+              </ul>
+              <hr>
+              <div>
+                <p style="font-size: 2vw; color: #293a32;">Total: <span id="total-price">₹0</span></p>
+
+                <a id="order-now-link" href="http://localhost:3003">
+                  <button id="order-now-btn" class="btn btn-outline-danger" type="submit">Order Now</button>
+                </a>
+
+              </div>
+          </div>
+        </div>
+
+      <section id="menu">
+
+        <!-- Chef-special -->
+        <section id="chef-special">
+
+            <div>
+                <h1 class="section-heading">Chef's Special :</h1>
+            </div>
+
+            <div class="item-info">
+                <div class="menu-item">
+                    <img src="images/pizza.png">
+                </div>
+                <div>
+                    <p class="item-name">PIZZA</p>
+                </div>
+                <div>
+                  <p class="item-des">A divine blend of melty cheese, savory toppings, and a golden crust that's simply irresistible.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹125</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class="adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+               <div class="item-info">
+                <div class="menu-item">
+                    <img src="/images/pasta.png">
+                </div>
+                <div>
+                    <p class="item-name">PASTA</p>
+                </div>
+                <div>
+                  <p class="item-des">Pasta pleasure: al dente strands, sauced to perfection, pure comfort in a bowl.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹55</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+               <div class="item-info">
+                <div class="menu-item">
+                    <img src="/images/burger.png">
+                </div>
+                <div>
+                    <p class="item-name">BURGER</p>
+                </div>
+                <div>
+                  <p class="item-des">Juicy perfection nestled between soft buns, a quick trip to flavor town in every mouthwatering bite.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹40</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+               <div class="item-info">
+                <div class="menu-item">
+                    <img src="/images/DOSA.png">
+                </div>
+                <div>
+                    <p class="item-name">DOSA</p>
+                </div>
+                <div>
+                  <p class="item-des">Experience the delight of a dosa: a South Indian symphony on your taste buds.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹95</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+               <div class="item-info">
+                <div class="menu-item">
+                    <img src="/images/pavbhaji.png">
+                </div>
+                <div>
+                    <p class="item-name">PAV BHAJI</p>
+                </div>
+                <div>
+                  <p class="item-des">A vibrant medley of mashed vegetables infused with aromatic spices.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹70</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+               <div class="item-info">
+                <div class="menu-item">
+                    <img src="/images/noodles.png">
+                </div>
+                <div>
+                    <p class="item-name">NOODLES</p>
+                </div>
+                <div>
+                  <p class="item-des">Slender strands, perfectly cooked, entwined in a symphony of savory sauces.</p>
+                </div>
+                <div>
+                  <p class="item-price">₹45</p>
+                </div>
+                <div class="addtocart">
+                  <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+                </div>
+               </div>
+
+        </section>
+
+        <section id="beverages">
+
+          <div>
+              <h1 class="section-heading">Beverages :</h1>
+          </div>
+
+          <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/coffee.png">
+              </div>
+              <div>
+                  <p class="item-name">COFFEE</p>
+              </div>
+              <div>
+                <p class="item-des">Sip bliss with coffee: rich, aromatic, an instant hug in a mug.</p>
+              </div>
+              <div>
+                <p class="item-price">₹50</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+             <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/mojito.png">
+              </div>
+              <div>
+                  <p class="item-name">MOJITO</p>
+              </div>
+              <div>
+                <p class="item-des">Zesty lime, cool mint — a refreshing dance for your taste buds.</p>
+              </div>
+              <div>
+                <p class="item-price">₹55</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+             <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/kitkatshake.png">
+              </div>
+              <div>
+                  <p class="item-name" style="letter-spacing: -0.25vw;">KITKAT SHAKE</p>
+              </div>
+              <div>
+                <p class="item-des">Blending creamy indulgence with the irresistible crunch of KitKat, a sip of pure delight.</p>
+              </div>
+              <div>
+                <p class="item-price">₹70</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+             <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/blueberrysmoothie.png">
+              </div>
+              <div>
+                  <p class="item-name" style="line-height: 2vw;">BLUEBERRY 
+                    <br>
+                    SMOOTHIE
+                  </p>
+              </div>
+              <div>
+                <p class="item-des" style="padding-top: 5.5vw;"> Bursting with freshness, a sip of fruity perfection.</p>
+              </div>
+              <div>
+                <p class="item-price">₹125</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+             <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/oreoshake.png">
+              </div>
+              <div>
+                  <p class="item-name" style="letter-spacing: -0.2vw;">OREO SHAKE</p>
+              </div>
+              <div>
+                <p class="item-des">Creamy perfection with a chocolatey twist.</p>
+              </div>
+              <div>
+                <p class="item-price">₹100</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+             <div class="item-info">
+              <div class="menu-item">
+                  <img src="/images/tea.png">
+              </div>
+              <div>
+                  <p class="item-name">TEA</p>
+              </div>
+              <div>
+                <p class="item-des">Steaming comfort in a cup, a soothing ritual for the senses.</p>
+              </div>
+              <div>
+                <p class="item-price">₹40</p>
+              </div>
+              <div class="addtocart">
+                <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+              </div>
+             </div>
+
+      </section>
+
+    <section id="ice-cream">
+
+      <div>
+          <h1 class="section-heading">Ice Cream & Sweets:</h1>
+      </div>
+
+      <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/pineapplesundae.png">
+          </div>
+          <div>
+            <p class="item-name" style="line-height: 2vw;">PINEAPPLE 
+              <br>
+              SUNDAE
+            </p>
+          </div>
+          <div>
+            <p class="item-des" style="padding-top: 5.5vw;">A sweet symphony of juicy pineapple and creamy indulgence.</p>
+          </div>
+          <div>
+            <p class="item-price">₹130</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+         <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/fudgebrownie.png">
+          </div>
+          <div>
+            <p class="item-name" style="line-height: 2vw;">FUDGE
+              <br>
+              BROWNIE
+            </p>
+          </div>
+          <div>
+            <p class="item-des" style="padding-top: 5.5vw;">Decadent bliss in every bite, a chocolate lover's dream come true.</p>
+          </div>
+          <div>
+            <p class="item-price">₹115</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+         <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/cheesecake.png">
+          </div>
+          <div>
+              <p class="item-name" style="letter-spacing: -0.25vw;">CHEESECAKE</p>
+          </div>
+          <div>
+            <p class="item-des"> Heavenly creaminess, a luscious slice of indulgence.</p>
+          </div>
+          <div>
+            <p class="item-price">₹150</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+         <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/chocotruffle.png">
+          </div>
+          <div>
+              <p class="item-name" style="line-height: 2vw;">CHOCO 
+                <br>
+                TRUFFLE
+              </p>
+          </div>
+          <div>
+            <p class="item-des" style="padding-top: 5.5vw;">Decadent delight, a melt-in-your-mouth chocolate experience.</p>
+          </div>
+          <div>
+            <p class="item-price">₹165</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+         <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/croissant.png">
+          </div>
+          <div>
+              <p class="item-name">CROISSANT</p>
+          </div>
+          <div>
+            <p class="item-des">Buttery layers, flaky perfection—bite into a taste of French elegance.</p>
+          </div>
+          <div>
+            <p class="item-price">₹190</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+         <div class="item-info">
+          <div class="menu-item">
+              <img src="/images/cassata.png">
+          </div>
+          <div>
+              <p class="item-name">CASSATA</p>
+          </div>
+          <div>
+            <p class="item-des">Layers of sweet sophistication, a symphony of flavors in every slice.</p>
+          </div>
+          <div>
+            <p class="item-price">₹125</p>
+          </div>
+          <div class="addtocart">
+            <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+          </div>
+         </div>
+
+  </section>
+
+  <section id="pizza">
+
+    <div>
+        <h1 class="section-heading">Pizza :</h1>
+    </div>
+
+    <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/blazingonion&peprika.png">
+        </div>
+        <div>
+          <p class="item-name" style="line-height: 2vw; letter-spacing: -0.1vw;">Blazing Onion
+            <br>
+            & Peprika
+          </p>
+      </div>
+      <div>
+        <p class="item-des" style="padding-top: 5.5vw;">Bold onion flavors meet the smoky kick of paprika.</p>
+      </div>
+        <div>
+          <p class="item-price">₹199</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+       <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/farmhousepizza.png">
+        </div>
+        <div>
+          <p class="item-name" style="line-height: 2vw;">Farmhouse
+            <br>
+            Pizza
+          </p>
+      </div>
+      <div>
+        <p class="item-des" style="padding-top: 5.5vw;">A medley of fresh veggies and savory delights atop a perfect crust.</p>
+      </div>
+        <div>
+          <p class="item-price">₹200</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+       <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/fieryjalapino.png">
+        </div>
+        <div>
+          <p class="item-name" style="line-height: 2vw;">Fiery
+            <br>
+            Jalapino
+          </p>
+      </div>
+      <div>
+        <p class="item-des" style="padding-top: 5.5vw;">A spicy sensation, where the heat of jalapeños meets cheesy perfection.</p>
+      </div>
+        <div>
+          <p class="item-price">₹270</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+       <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/mexicangreenwave.png">
+        </div>
+        <div>
+            <p class="item-name" style="line-height: 2vw;">Mexican 
+              <br>
+              Greenwave
+            </p>
+        </div>
+        <div>
+          <p class="item-des" style="padding-top: 5.5vw;">Zesty salsa, fresh guacamole, and a sprinkle of Mexican spices.</p>
+        </div>
+        <div>
+          <p class="item-price">₹280</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+       <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/peppypaneer.png">
+        </div>
+        <div>
+            <p class="item-name" style="letter-spacing: -0.1vw;">Peppy Paneer</p>
+        </div>
+        <div>
+          <p class="item-des">Marinated paneer, vibrant bell peppers, and a burst of flavor in every cheesy bite.</p>
+        </div>
+        <div>
+          <p class="item-price">₹210</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+       <div class="item-info">
+        <div class="menu-item">
+            <img src="/images/veggieparadise.png">
+        </div>
+        <div>
+          <p class="item-name" style="line-height: 2vw;">Veggie
+            <br>
+            Paradise
+          </p>
+      </div>
+      <div>
+        <p class="item-des" style="padding-top: 5.5vw;">A garden on a plate, where fresh, colorful vegetables unite.</p>
+      </div>
+        <div>
+          <p class="item-price">₹290</p>
+        </div>
+        <div class="addtocart">
+          <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+        </div>
+       </div>
+
+</section>
+
+<section id="snacks">
+
+  <div>
+      <h1 class="section-heading">Snacks :</h1>
+  </div>
+
+  <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/momos.png">
+      </div>
+      <div>
+        <p class="item-name">Momos
+        </p>
+    </div>
+    <div>
+      <p class="item-des">Steamed pockets of joy, bursting with savory goodness.</p>
+    </div>
+      <div>
+        <p class="item-price">₹85</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+     <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/springrolls.png">
+      </div>
+      <div>
+        <p class="item-name">Spring Rolls</p>
+    </div>
+    <div>
+      <p class="item-des">Crispy perfection wrapped around a medley of fresh veggies.</p>
+    </div>
+      <div>
+        <p class="item-price">₹95</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+     <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/chillipotato.png">
+      </div>
+      <div>
+        <p class="item-name">Chilli Potato
+        </p>
+    </div>
+    <div>
+      <p class="item-des">Crispy bites coated in a fiery glaze, a tantalizing dance of spice and sweetness.</p>
+    </div>
+      <div>
+        <p class="item-price">₹105</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+     <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/manchurian.png">
+      </div>
+      <div>
+          <p class="item-name">Manchurian
+          </p>
+      </div>
+      <div>
+        <p class="item-des">A savory delight with crispy goodness, drenched in a flavorful blend of sweet and tangy sauce.</p>
+      </div>
+      <div>
+        <p class="item-price">₹125</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+     <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/paneertikka.png">
+      </div>
+      <div>
+          <p class="item-name">Paneer Tikka</p>
+      </div>
+      <div>
+        <p class="item-des">Marinated paneer cubes infused with aromatic spices, a taste of smoky bliss.</p>
+      </div>
+      <div>
+        <p class="item-price">₹150</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+     <div class="item-info">
+      <div class="menu-item">
+          <img src="/images/sizzler.png">
+      </div>
+      <div>
+        <p class="item-name" style="line-height: 2vw;">Sizzler</p>
+    </div>
+    <div>
+      <p class="item-des">Grilled perfection on a platter, where every bite is a flavor explosion.</p>
+    </div>
+      <div>
+        <p class="item-price">₹399</p>
+      </div>
+      <div class="addtocart">
+        <button onclick="bringSidebar()" type="button" class=" adc-button btn btn-outline-danger">ADD TO CART</button>            
+      </div>
+     </div>
+
+</section>
+
+  
+ </section>
+
+      <!-- here comes footer -->
+      <section id="contact">
+        <div class="footer container-fluid">
+          <div class="footer-border">
+            <div class="footer-line">
+              <h1 style="font-size: 3vw;">COME HAVE LUNCH</h1>
+            <div class="cafe-details">
+              <p>Shree Krishna Bhavan <br>
+                JC Bose University YMCA <br>                 
+                Sector 6 Faridabad <br>
+                9971815790 <br>
+                9am-5pm</p>
+            </div>
+           </div>
+          </div>  
+        </div>
+      </section>
+
+      <!-- font-awesome -->
+      <script src="https://kit.fontawesome.com/94eedba8e3.js" crossorigin="anonymous"></script>
+
+      <!-- bootstrap-js  -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     
+     <!-- jQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+     <!-- my-javascript -->
+     <script src="menu.js" charset="utf-8"></script>
+    
+</body>
+</html>

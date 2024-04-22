@@ -1,0 +1,251 @@
+
+body{
+    text-align: center;
+    margin: 0 3vw;
+}
+
+/* navbar */
+.shopping-icon{
+    color: rgb(86, 182, 51);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding-right: 0.6vw ;
+}
+
+.shopping-icon:hover{
+    color: #4C8F36;
+}
+
+.shopping-icon span{
+    background-color: rgb(216, 135, 12);
+    color: white;
+    border-radius: 100%;
+    justify-content: center; 
+    position:absolute;
+    top: 5%;
+    right: 0.5%;
+    padding: 0.2vw;
+    font-size: 15px;
+}
+
+nav a.bold {
+    /* Style to be applied to the active section's button */
+    color: black;
+    font-weight: 500;
+}
+
+/* header */
+.top-heading{
+    text-align: left;
+    margin-top: 10vw;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 700;
+}
+
+.top-para{
+    text-align: left;
+}
+
+.category{
+    text-align: left;
+}
+
+.cat-button{
+    margin: 2vw 1.5vw 1vw 0;
+    border-radius: 0%;
+}
+
+/* cart */
+.sidebar {
+    width: 30vw;
+    position: fixed;
+    top: 3vw;
+    right: -30vw;
+    height: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    transition: 0.3s;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sidebar-content {
+    font-size: 3vw;
+    border: 0.2vw dashed #d8d8d8;
+    position: relative;
+    padding-top: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 3vw;
+}
+
+.show {
+    right: 0;
+}
+
+.cart-item-dis .item-info{
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: none;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0.5vw;
+    text-align: justify;
+    font-size: 1.5vw;
+    line-height: -1vw;
+}
+
+.cart-item-dis .ii-price{
+    color: #4C8F36;
+    top: 7vw;
+
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+.quantity-btn {
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw auto 1vw;
+}
+
+.quantity {
+    font-size: 1.5vw;
+    margin: 0 5px 3px;
+}
+
+.cart-pic{
+    width: 50%;
+    display: inline-block;
+}
+
+.cart-item{
+    list-style-type: none;
+    position: relative;
+    line-height: -1vw;
+}
+
+.cart-item-dis{
+    display: inline-block;
+    width: 40%;
+    line-height: -1vw;
+}
+
+
+
+/* menu */
+.section-heading{
+    text-align: left;
+    padding: 2vw 0;
+}
+
+#menu{
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10vw;
+}
+
+.item-info{
+    display: inline-block;
+    width: 19vw;
+    margin: 2%;
+    margin-bottom: 5vw;
+    position: relative;
+    font-size: 2vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.item-info:hover{
+    transform: scale(1.02);
+}
+
+.menu-item{
+    width: 100%;
+    text-align: center;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.item-name{
+    margin-top: 1vw;
+    position: absolute;
+    left: 1vw;
+    display: inline-block;
+}
+
+.item-price{
+    margin-top: 1vw;
+    position: absolute;
+    right: 1vw;
+    display: inline-block;
+    color: #4C8F36;
+}
+
+.addtocart{
+    margin: 11vw 0 2vw 0;
+    text-align: center;
+}
+
+.adc-button{
+    font-size: 1.5vw;
+}
+
+.item-des{
+    opacity: 0.8;
+    font-weight: 50;
+    font-size: 1.1vw;
+    position: absolute;
+    left: 0;
+    text-align: justify;
+    display: inline-block;
+    padding: 4vw 3vw 0 1vw;
+}
+
+/* footer */
+#contact{
+    background: url('/images/footer-bg.png');
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.footer-border{
+    display: inline-block;
+    width: 50%;
+    margin: 10% 0 10% 30%;
+    border: 0.8vw solid white;
+    border-radius: 3px;
+    color: #3F544A;
+}
+
+.footer-line{
+    margin-top: 10%;
+    padding: 10%;
+    text-align: left;
+}
+
+
+.cafe-details{
+    margin-top: 10%;
+    display: inline-block;
+}

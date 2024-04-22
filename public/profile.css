@@ -1,0 +1,73 @@
+body{
+    text-align: center;
+}
+
+.description{
+    background: url('images2/profile-bg.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: repeat;
+    padding-top: 10vw;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.customer-des{
+    text-align: left;
+    padding-top: 3vw;
+}
+
+.customer-info{
+    display: inline-block;
+    position: relative;
+    bottom: -2vw;
+    margin-right: 50vw;
+}
+
+.customer-name{
+    font-size: 2vw;
+    color: black;
+}
+
+.customer-image{
+    width: 10vw;
+    border-radius: 100vw;
+    margin-left: 2vw;
+    margin-right: 1vw;
+    border: solid 0.3vw white;
+    box-shadow: 0 1vw 2vw 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    position: relative;
+    bottom: -2vw;
+}
+
+.customer-location{
+    display: inline-block;
+    color: #000;
+}
+
+.location-pin{
+    width: 2vw;
+}
+
+.ratings{
+    display: inline-block;
+    position: relative;
+    bottom: -2vw;
+}
+
+.customer-work{
+    text-align: center;
+    display: inline-block;
+}
+
+.customer-work-numbers{
+    font-size: 2vw;
+    margin: 0;
+    color: #000;
+}
+
+.customer-work-type{
+    font-size: 1vw;
+    color: #2a2828;
+}
